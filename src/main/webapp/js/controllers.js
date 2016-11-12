@@ -188,6 +188,71 @@
             }     
             
           }
-        }
+          
+        };
+        $scope.realizarSorteio = function(sorteio){
+            
+            $.ajax({
+              dataType: "json",
+              method: "POST",
+              url: "api/rest/events/SorteioREST/sorteiobuttonngclick",
+              data: JSON.stringify(sorteio),
+              headers: {
+                'Content-Type' : 'application/json'
+              },
+              success: function(data) {
+                
+                this.$apply(function() {
+                  $scope.premiado = data;
+                  sorteio.aluno = data;
+                  $('#premiadoModal').modal('show');
+                }.bind(this));
+                
+              }.bind(this)
+            });
+            
+        };
+        $scope.testeSorteio = function(){
+            
+            $.ajax({
+              dataType: "json",
+              method: "POST",
+              url: "api/rest/events/SorteioREST/teste",
+              headers: {
+                'Content-Type' : 'application/json'
+              },
+              success: function(data) {
+                
+                this.$apply(function() {
+                  $scope.premiado = data;
+                  $('#premiadoModal').modal('show');
+                }.bind(this));
+                
+              }.bind(this)
+            });
+            
+        };
+        
+        $scope.resetSorteio = function(sorteio){
+            
+            $.ajax({
+              dataType: "json",
+              method: "POST",
+              data: JSON.stringify(sorteio),
+              url: "api/rest/events/SorteioREST/reset",
+              headers: {
+                'Content-Type' : 'application/json'
+              },
+              success: function(data) {
+                
+                this.$apply(function() {
+                  Notification.info(sorteio.premio + " liberado pra sorteio novamente!");
+                  Sorteio.filter();
+                }.bind(this));
+                
+              }.bind(this)
+            });
+            
+        };
     }]);
 } (app));

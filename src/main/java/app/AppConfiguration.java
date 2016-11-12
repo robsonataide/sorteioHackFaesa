@@ -17,7 +17,7 @@ import auth.permission.SecurityPermission;
 /**
  * Classe que configura os beans para persistencia
  * 
- * @author Usuário de Teste
+ * @author Robson Ataide
  *
  */
 @Configuration

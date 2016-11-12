@@ -5,7 +5,10 @@
         <jta-data-source>java:comp/env/jdbc/main</jta-data-source>
         <class>app.entity.UserRole</class>
         <class>app.entity.User</class>
+        <class>app.entity.Aluno</class>
+        <class>app.entity.SorteioAluno</class>
         <class>app.entity.Role</class>
+        <class>app.entity.Sorteio</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:h2:file:~/79698564f0714485904c2d27d1da6f4a;DATABASE_TO_UPPER=false;ALIAS_COLUMN_NAME=true;AUTO_SERVER=TRUE"/>

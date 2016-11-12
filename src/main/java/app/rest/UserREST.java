@@ -19,7 +19,7 @@ import app.business.*;
 /**
  * Controller para expor serviços REST de User
  * 
- * @author Usuário de Teste
+ * @author Robson Ataide
  * @version 1.0
  * @generated
  **/
