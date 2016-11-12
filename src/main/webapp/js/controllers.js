@@ -205,6 +205,7 @@
                 this.$apply(function() {
                   $scope.premiado = data;
                   sorteio.aluno = data;
+                  sorteio.sorteadoEm = (new Date()).getTime();
                   $('#premiadoModal').modal('show');
                 }.bind(this));
                 
