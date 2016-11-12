@@ -2,12 +2,12 @@
 
 <div class=""></div> 
 <div class="component-holder ng-binding ng-scope ui-draggable ui-draggable-handle" data-component="crn-datasource" id="crn-datasource-763276"> 
-   <datasource name="Sorteio" entity="api/rest/Sorteio" keys="id" rows-per-page="100" delete-message="Deseja remover?" class=""></datasource> 
+   <datasource name="Sorteio" entity="api/rest/Sorteio" keys="id" rows-per-page="100" delete-message="Deseja remover?" class="" on-before-update="app.userEvents.sorteioDatasourceOnBeforeUpdate(event)"></datasource> 
 </div> 
 <div class=""></div> 
 <div class="component-holder ng-binding ng-scope ui-draggable ui-draggable-handle" data-component="crn-button" id="crn-button-564202"> 
   <button class="btn btn-primary" type="submit" onclick="" ng-click="Sorteio.startInserting()" ng-hide="Sorteio.inserting || Sorteio.editing"><i class="fa fa-user"></i> <span class="">{{"template.crud.new" | translate}}</span></button> 
-  <button class="btn btn-primary" type="button" onclick="" ng-click="testeSorteio()" ><i class="fa fa-user"></i> <span class=""> Teste</span></button> 
+  <button class="btn btn-primary" type="button" onclick="" ng-click="testeSorteio()"><i class="fa fa-user"></i> <span class=""> Teste</span></button> 
 </div> 
 <div class=""></div> 
 <div class="component-holder ng-binding ng-scope ui-draggable ui-draggable-handle" data-component="crn-grid" id="crn-grid-Sorteio"> 
@@ -50,9 +50,7 @@
           </td> 
           <td class=""> 
             <div class="">
-
-                  {{rowData.sorteadoEm}}
-        
+                {{ rowData.sorteadoEm | date : 'dd/MM/yyyy' }}
             </div>
           </td> 
           <td class=""> 
@@ -131,7 +129,9 @@
 				<div data-container="true" class="">Premiado</div>
 			</div>
  			<div class="modal-body">
-					<div data-container="true" class="">{{premiado.nome}}</div>
+				<div data-container="true" class="">
+				    <h1>{{premiado.nome}}</h1>
+				</div>
 			</div>
 		</div>
 	</div>

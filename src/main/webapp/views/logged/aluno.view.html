@@ -14,14 +14,9 @@
     <table class="table  table-bordered table-hover table-striped"> 
       <thead> 
         <tr class="table-header"> 
-          <th class=""> 
-            <div class="">Id</div>
-          </th> 
+          
           <th class=""> 
             <div class="">Nome</div>
-          </th> 
-          <th class=""> 
-            <div class="">Premiado</div>
           </th> 
           <th class=""> 
           <div class="">{{"template.crud.actions" | translate}}</div>
@@ -30,24 +25,11 @@
       </thead> 
       <tbody> 
         <tr class="table-content" ng-repeat="rowData in datasource.data"> 
-          <td class=""> 
-            <div class="">
-
-                  {{rowData.id}}
-        
-            </div>
-          </td> 
+          
           <td class=""> 
             <div class="">
 
                   {{rowData.nome}}
-        
-            </div>
-          </td> 
-          <td class=""> 
-            <div class="">
-
-                  {{rowData.premiado}}
         
             </div>
           </td> 

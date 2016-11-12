@@ -44,9 +44,8 @@ public class Sorteio implements Serializable {
   /**
    * @generated
    */
-  @Temporal(TemporalType.DATE)
   @Column(name = "sorteadoEm", nullable = true, unique = false, insertable=true, updatable=true)
-  private java.util.Date sorteadoEm;
+  private java.lang.Long sorteadoEm;
   
   /**
    * @generated
@@ -110,7 +109,7 @@ public class Sorteio implements Serializable {
    * return sorteadoEm
    * @generated
    */
-  public java.util.Date getSorteadoEm(){
+  public java.lang.Long getSorteadoEm(){
     return this.sorteadoEm;
   }
   
@@ -119,7 +118,7 @@ public class Sorteio implements Serializable {
    * @param sorteadoEm sorteadoEm
    * @generated
    */
-  public Sorteio setSorteadoEm(java.util.Date sorteadoEm){
+  public Sorteio setSorteadoEm(java.lang.Long sorteadoEm){
     this.sorteadoEm = sorteadoEm;
     return this;
   }

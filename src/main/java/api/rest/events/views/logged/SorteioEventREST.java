@@ -38,7 +38,7 @@ public class SorteioEventREST {
     
     try{
       sorteio.setAluno(premiado);
-      sorteio.setSorteadoEm(new Date());
+      sorteio.setSorteadoEm((new Date()).getTime());
       sorteioBusiness.put(sorteio);
     }catch(Exception ex){
       throw ex;
